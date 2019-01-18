@@ -1,11 +1,3 @@
-/* Pseudo-code
-    get names.txt
-    for each line
-        for i=line.length-1; i > 0; i--;
-            line = new array
-            line.push(line[i]);
-*/
-
 const fs = require('fs');
 let fileName = process.argv[2];
 
@@ -22,9 +14,17 @@ fs.readFile(fileName,'utf-8',function(err,contents){
     })
 });
 
-/*function checkIfPalindrome(name){
+/* Pseudo-code
+    get names.txt
+    for each line
+        for i=line.length-1; i > 0; i--;
+            line = new array
+            line.push(line[i]);
+*/
+
+/* function checkIfPalindrome(name){
     let origName = name;
-    for(let i=0; i > name.length - i;i++){
+    for(let i=0; i > name.length;i++){
         let curLastIndex = name.length - i;
         let hiddenVal = name[i];
         name[i] = name[curLastIndex];
